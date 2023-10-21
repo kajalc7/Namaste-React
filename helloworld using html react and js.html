@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+    <script
+        crossorigin 
+        src="https://unpkg.com/react@18/umd/react.development.js">//CORS (Cross Origin Resource Sharing) is an HTTP feature that enables a web application running under one domain to access resources in another domain. In order to reduce the possibility of cross-site scripting attacks, all modern web browsers implement a security restriction known as same-origin policy
+    </script>
+    <script
+        crossorigin 
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">//first file is react.development.js which is core of react that is code file of react and sec one is react dom it is react library which we use for dom operation or whihc we need to modify dom.
+    </script>
+    <script>
+        const heading= React.createElement("h1",{},"Hello world from react")//creating heading in react
+        const root = ReactDOM.createRoot(document.getElementById("root"));//created root element where all changes will take places thats why we use react dom
+        root.render(heading);
+    </script>
+</body>
+<!-- hello world using html
+     <body>
+    <div id=""root">
+    <h1>Hello World!</h1>
+    </div>
+</body>
+ hello world using javascript
+<body>
+    <div id="root">
+    </div>
+    <script>
+        const heading = document.createElement("h1")//creating h1 tag inside javascript
+        heading.innerHTML = "Hello World from javascript";//putting helloworld inside that h1"
+        //now we need to put this heading inside the root now e need to find the root
+        const root=document.getElementById("root");//this rooot will have refernce to our div tag
+        //in div tag we need to put heading
+        root.appendChild(heading);
+    </script>
+</body> -->
+</html>
